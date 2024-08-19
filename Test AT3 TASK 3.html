@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment and Financial Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .info-box {
+            background-color: #e8f0cc;
+            border: 2px dotted #b0c4de;
+            padding: 20px;
+            width: 500px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+        
+        .task-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: green;
+            margin: 10px 0;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        h3 {
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+        
+        .student-info {
+            line-height: 1.5;
+        }
+        
+        /* Container for the Table and Dashboard */
+        .container {
+            display: flex;
+            flex-direction: row-reverse; /* Make the dashboard appear on the left */
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        /* Styles for Financial Report Table, table-one is for task 2 */
+        #table-one-container {
+            width: 100%; /* Increase table width */
+        }
+        
+        #table-one {
+            display: inline-block; /* Ensure the table is treated as an inline-block element */
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 120%;
+            color: #333;
+        }
+        
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        #table-one th {
+            background-color: #002d62;
+            color: white;
+            text-align: center;
+        }
+        
+        #table-one tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        #table-one caption {
+            font-size: 2.5em; 
+            margin-bottom: 10px;
+        }
+        
+        /* Dashboard Section */
+        .dashboard-container {
+            width: 30%; /* Adjust dashboard width */
+            text-align: center;
+        }
+        
+        .dashboard-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .dashboard-container a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .dashboard-container a:hover {
+            text-decoration: underline;
+        }    
+    </style>
+</head>
+<body>
+    <div class="task-list">
+        <h1>Task 1: Use CSS to display the following information</h1>
+
+        <!-- Assignment Information -->
+        <div class="info-box">
+            <div class="student-info">
+                <h1>Student ID: 8560080</h1>
+                <h1>Student Name: Jane Guo</h1>
+            </div>
+            <h2>University of Wollongong</h2>
+            <h2>COMP804: Web Security</h2>
+            <h2>Faculty of Engineering and Information Sciences/School of Computing and Information Technology</h2>
+            <h3>Assessment Task 3 Assignment 1, due @ 11pm Monday 19 August 2024</h3>
+        </div>
+
+        <h1>Task 2: Use CSS to style a table</h1>
+
+        <!-- Table and Dashboard Section -->
+        <div class="container">
+            <!-- Dashboard Section with Image and Report Link -->
+            <div class="dashboard-container">
+                <img id="dashboardImage" src="FY24.png" alt="Dashboard Image">
+                <a href="2024-Half-Year-Results-TechnologyOne.pdf" target="_blank">View the full report</a>
+            </div>
+            
+            <!-- Table Section -->
+            <div id="table-one-container">
+                <table id="table-one">
+                    <caption>FY24 vs FY23 Financial Report</caption>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>H1 FY24 ($m)</th>
+                            <th>H1 FY23 ($m)</th>
+                            <th>VAR ($m)</th>
+                            <th>VAR (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total ARR</td>
+                            <td>423.6</td>
+                            <td>350.6</td>
+                            <td>73.0</td>
+                            <td>21%</td>
+                        </tr>
+                        <tr>
+                            <td>SaaS & Recurring Revenue</td>
+                            <td>223.1</td>
+                            <td>183.9</td>
+                            <td>39.2</td>
+                            <td>21%</td>
+                        </tr>
+                        <tr>
+                            <td>Total Revenue</td>
+                            <td>244.8</td>
+                            <td>210.3</td>
+                            <td>34.5</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Profit Before Tax</td>
+                            <td>61.5</td>
+                            <td>52.7</td>
+                            <td>8.8</td>
+                            <td>17%</td>
+                        </tr>
+                        <tr>
+                            <td>Profit After Tax</td>
+                            <td>48.0</td>
+                            <td>41.3</td>
+                            <td>6.7</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Cash Flow Generation</td>
+                            <td>(3.8)</td>
+                            <td>1.3</td>
+                            <td>(5.1)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Cash and Investments</td>
+                            <td>172.0</td>
+                            <td>139.1</td>
+                            <td>32.9</td>
+                            <td>24%</td>
+                        </tr>
+                        <tr>
+                            <td>PBT Margin</td>
+                            <td>25%</td>
+                            <td>25%</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>EPS (cps)</td>
+                            <td>14.75</td>
+                            <td>12.73</td>
+                            <td>2.02</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Interim Dividend (cps)</td>
+                            <td>5.08</td>
+                            <td>4.62</td>
+                            <td>0.46</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>R&D Investment</td>
+                            <td>56.9</td>
+                            <td>49.4</td>
+                            <td>7.5</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>R&D Investment % to Revenue</td>
+                            <td>24%</td>
+                            <td>24%</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h1>Task 3 HTML & CSS</h1>
+        <!-- Task 3 Table here -->
+    </div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment and Financial Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .info-box {
+            background-color: #e8f0cc;
+            border: 2px dotted #b0c4de;
+            padding: 20px;
+            width: 500px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+        
+        .task-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: green;
+            margin: 10px 0;
+        }
+        
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        h3 {
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+        
+        .student-info {
+            line-height: 1.5;
+        }
+        
+        /* Container for the Table and Dashboard */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        /* Styles for Financial Report Table */
+        #table-one-container {
+            width: 70%; /* Adjust table width */
+        }
+        
+        #table-one {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 120%;
+            color: #333;
+        }
+        
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        #table-one th {
+            background-color: #002d62;
+            color: white;
+            text-align: center;
+        }
+        
+        #table-one tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        #table-one caption {
+            font-size: 2.5em; 
+            margin-bottom: 10px;
+        }
+        
+        /* Dashboard Section */
+        .dashboard-container {
+            width: 30%; /* Adjust dashboard width */
+        }
+        
+        .dashboard-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        
+        .dashboard-container a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 16px;
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .dashboard-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="task-list">
+        <h1>Task 1: Use CSS to display the following information</h1>
+
+        <!-- Assignment Information -->
+        <div class="info-box">
+            <div class="student-info">
+                <h1>Student ID: 8560080</h1>
+                <h1>Student Name: Jane Guo</h1>
+            </div>
+            <h2>University of Wollongong</h2>
+            <h2>COMP804: Web Security</h2>
+            <h2>Faculty of Engineering and Information Sciences/School of Computing and Information Technology</h2>
+            <h3>Assessment Task 3 Assignment 1, due @ 11pm Monday 19 August 2024</h3>
+        </div>
+
+        <h1>Task 2: Use CSS to style a table</h1>
+        <h1>TechnologyOne Ltd (ASX: TNE) - 2024 Results Ended 31 March 2024</h1>
+
+        <!-- Table and Dashboard Section -->
+        <div class="container">
+            <!-- Dashboard Section with Image and Report Link -->
+            <div class="dashboard-container">
+                <img id="dashboardImage" src="FY24.png" alt="Dashboard Image">
+                <a href="2024-Half-Year-Results-TechnologyOne.pdf" target="_blank">View the full report</a>
+            </div>
+
+            <!-- Table Section -->
+            <div id="table-one-container">
+                <table id="table-one">
+                    <caption><strong>FY24 vs FY23 Financial Report</strong></caption>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>H1 FY24 ($m)</th>
+                            <th>H1 FY23 ($m)</th>
+                            <th>VAR ($m)</th>
+                            <th>VAR (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total ARR</td>
+                            <td>423.6</td>
+                            <td>350.6</td>
+                            <td>73.0</td>
+                            <td>21%</td>
+                        </tr>
+                        <tr>
+                            <td>SaaS & Recurring Revenue</td>
+                            <td>223.1</td>
+                            <td>183.9</td>
+                            <td>39.2</td>
+                            <td>21%</td>
+                        </tr>
+                        <tr>
+                            <td>Total Revenue</td>
+                            <td>244.8</td>
+                            <td>210.3</td>
+                            <td>34.5</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Profit Before Tax</td>
+                            <td>61.5</td>
+                            <td>52.7</td>
+                            <td>8.8</td>
+                            <td>17%</td>
+                        </tr>
+                        <tr>
+                            <td>Profit After Tax</td>
+                            <td>48.0</td>
+                            <td>41.3</td>
+                            <td>6.7</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Cash Flow Generation</td>
+                            <td>(3.8)</td>
+                            <td>1.3</td>
+                            <td>(5.1)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Cash and Investments</td>
+                            <td>172.0</td>
+                            <td>139.1</td>
+                            <td>32.9</td>
+                            <td>24%</td>
+                        </tr>
+                        <tr>
+                            <td>PBT Margin</td>
+                            <td>25%</td>
+                            <td>25%</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>EPS (cps)</td>
+                            <td>14.75</td>
+                            <td>12.73</td>
+                            <td>2.02</td>
+                            <td>16%</td>
+                        </tr>
+                        <tr>
+                            <td>Interim Dividend (cps)</td>
+                            <td>5.08</td>
+                            <td>4.62</td>
+                            <td>0.46</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>R&D Investment</td>
+                            <td>56.9</td>
+                            <td>49.4</td>
+                            <td>7.5</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td>R&D Investment % to Revenue</td>
+                            <td>24%</td>
+                            <td>24%</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Attacks Table</title>
+</head>
+<body>
+    <div id="table-two-container">
+        <table id="table-two">
+            <caption>THE TABLE BELOW DISPLAYS 10 KINDS OF WEB ATTACKS</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Web Attacks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        SQL Injection<br>
+                        <img class="attack-image" src="sql_injection_image_url.jpg" alt="SQL Injection Image">
+                        <span class="source-link">Source: https://securitytutorials.co.uk</span>
+                    </td>
+                    <td>
+                        <p class="description">SQL Injection is a code injection technique that might destroy your database. It is one of the most common web hacking techniques, allowing attackers to manipulate databases by inserting malicious SQL code.</p>
+                        <a class="web-attack-link" href="https://www.tripwire.com/" target="_blank">Learn more about SQL Injection</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Cross-Site Scripting (XSS)<br>
+                        <img class="attack-image" src="xss_image_url.jpg" alt="Cross-Site Scripting Image">
+                        <span class="source-link">Source: https://websitesecuritystore.com</span>
+                    </td>
+                    <td>
+                        <p class="description">Cross-Site Scripting (XSS) allows attackers to inject malicious scripts into trusted websites. These scripts can steal cookies, session tokens, and sensitive information, compromising user security.</p>
+                        <a class="web-attack-link" href="https://websitesecuritystore.com" target="_blank">Learn more about Cross-Site Scripting</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Distributed Denial of Service (DDoS)<br>
+                        <img class="attack-image" src="ddos_image_url.jpg" alt="DDoS Attack Image">
+                        <span class="source-link">Source: https://securitywebsite.com</span>
+                    </td>
+                    <td>
+                        <p class="description">A Distributed Denial of Service (DDoS) attack overwhelms a targeted server with a flood of internet traffic, rendering it unavailable to users. These attacks disrupt services and can cause financial losses.</p>
+                        <a class="web-attack-link" href="https://www.cloudflare.com/" target="_blank">Learn more about DDoS Attacks</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Man-in-the-Middle (MITM)<br>
+                        <img class="attack-image" src="mitm_image_url.jpg" alt="MITM Attack Image">
+                        <span class="source-link">Source: https://infosecurity.com</span>
+                    </td>
+                    <td>
+                        <p class="description">Man-in-the-Middle (MITM) attacks occur when attackers secretly intercept and manipulate communications between two parties. This can allow attackers to eavesdrop on private conversations and steal sensitive information.</p>
+                        <a class="web-attack-link" href="https://www.kaspersky.com/" target="_blank">Learn more about MITM Attacks</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phishing<br>
+                        <img class="attack-image" src="phishing_image_url.jpg" alt="Phishing Attack Image">
+                        <span class="source-link">Source: https://phishingsecurity.org</span>
+                    </td>
+                    <td>
+                        <p class="description">Phishing attacks are fraudulent attempts to obtain sensitive information such as usernames, passwords, and credit card details by impersonating a trustworthy entity via email or messaging.</p>
+                        <a class="web-attack-link" href="https://www.phishing.org/" target="_blank">Learn more about Phishing</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ransomware<br>
+                        <img class="attack-image" src="ransomware_image_url.jpg" alt="Ransomware Attack Image">
+                        <span class="source-link">Source: https://ransomwaresecurity.com</span>
+                    </td>
+                    <td>
+                        <p class="description">Ransomware is a type of malware that encrypts a victim's files, demanding payment (a ransom) to restore access. These attacks can devastate individuals and organizations, often leading to data loss and financial damage.</p>
+                        <a class="web-attack-link" href="https://www.symantec.com/" target="_blank">Learn more about Ransomware</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Brute Force Attack<br>
+                        <img class="attack-image" src="bruteforce_image_url.jpg" alt="Brute Force Attack Image">
+                        <span class="source-link">Source: https://cyberattackwebsite.com</span>
+                    </td>
+                    <td>
+                        <p class="description">A Brute Force Attack is a trial-and-error method used to decode encrypted data such as passwords. Attackers systematically try all possible combinations to crack the code and gain unauthorized access to the system.</p>
+                        <a class="web-attack-link" href="https://www.securitymagazine.com/" target="_blank">Learn more about Brute Force Attacks</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Zero-Day Exploit<br>
+                        <img class="attack-image" src="zeroday_image_url.jpg" alt="Zero-Day Exploit Image">
+                        <span class="source-link">Source: https://zerodayprotection.com</span>
+                    </td>
+                    <td>
+                        <p class="description">A Zero-Day Exploit is an attack that targets a previously unknown vulnerability in software or hardware, often before developers can patch the security hole. These attacks can be extremely dangerous as they exploit unprepared systems.</p>
+                        <a class="web-attack-link" href="https://www.zdnet.com/" target="_blank">Learn more about Zero-Day Exploits</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Session Hijacking<br>
+                        <img class="attack-image" src="sessionhijack_image_url.jpg" alt="Session Hijacking Image">
+                        <span class="source-link">Source: https://securityplatform.com</span>
+                    </td>
+                    <td>
+                        <p class="description">Session Hijacking involves the exploitation of a valid computer session to gain unauthorized access to information or services in a system. Attackers intercept session tokens to take control of the user’s active session.</p>
+                        <a class="web-attack-link" href="https://www.netsparker.com/" target="_blank">Learn more about Session Hijacking</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+        <h1>Task 4: JavaScript with Button</h1>
+        <p><!-- Content for Task 4 goes here --></p>
+
+        <h1>Task 5: GitHub Repository</h1>
+        <p><!-- Content for Task 5 goes here --></p>
+    </div>
+</body>
+</html>
